@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form uni</title>
+    <script src="./index.js" defer></script>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <form>
+      <div>
+        <label for="nome">NOME</label>
+        <input type="text" id="nome" />
+      </div>
+
+      <div>
+        <label for="sesso">SESSO</label>
+        <select name="sesso" id="sesso">
+          <option value=""></option>
+          <option value="maschio">maschio</option>
+          <option value="femmina">femmina</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="ateneo">ATENEO</label>
+        <select name="ateneo" id="ateneo">
+          <option value=""></option>
+          <option value="napoli">UNIVERSITà DI NAPOLI</option>
+          <option value="roma">UNIVERSITà DI ROMA</option>
+          <option value="milano">UNIVERSITà DI MILANO</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="cap">CAP</label>
+        <input type="text" id="cap" />
+      </div>
+
+      <div>
+        <label for="studente">SONO UNO STUDENTE LAVORATORE</label>
+        <input type="checkbox" id="studente" />
+      </div>
+
+      <div class="column">
+        <label for="lavoro">DESCRIZIONE DEL LAVORO SVOLTO</label>
+        <textarea name="descrizione" id="lavoro" cols="30" rows="10"></textarea>
+      </div>
+
+      <div>
+        <input type="submit" value="invio" />
+      </div>
+      <p></p>
+    </form>
+  </body>
+</html>
