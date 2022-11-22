@@ -1,0 +1,71 @@
+<html>
+  <head>
+    <title>dati uni</title>
+    <style>
+      input {
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <form>
+      <div>
+        <label for="nome">NOME</label> <br />
+        <input type="text" id="nome" /> <br />
+      </div>
+    </form>
+    <div>
+      <label for="sesso">SESSO</label><br />
+      <select name="sesso" id="sesso">
+        <option value="nessuno"></option>
+        <option value="maschio">maschio</option>
+        <option value="femmina">femmina</option></select
+      ><br />
+    </div>
+    <div>
+      <label for="ateneo">ATENEO</label><br />
+      <select name="ateneo" id="ateneo">
+        <option value="nessuno"></option>
+        <option value="napoli">UNIVERSITà DI NAPOLI</option>
+        <option value="roma">UNIVERSITà DI ROMA</option>
+        <option value="milano">UNIVERSITà DI MILANO</option></select
+      ><br />
+    </div>
+    <form>
+      <div>
+        <label for="cap">CAP</label><br />
+        <input type="text" id="cap" /><br />
+      </div>
+    </form>
+
+    <div>
+      <label for="studente">SONO UNO STUDENTE LAVORATORE</label><br />
+      <input type="checkbox" id="studente" /><br />
+    </div>
+    <div>
+      <label for="lavoro">DESCRIZIONE DEL LAVORO SVOLTO</label> <br />
+      <textarea name="descrizione" id="" cols="30" rows="10"></textarea><br />
+    </div>
+    <div>
+      <input type="submit" value="invio" />
+    </div>
+    <br />
+    <p></p>
+
+    <script>
+      const form = document.querySelector("form");
+      const nome = document.getElementById("nome");
+      const cap = document.getElementById("cap");
+      const paragrafo = document.querySelector("p");
+
+      form.onsubmit = function (e) {
+        if (cap.value === "" || nome.value === "");
+        {
+          e.preventDefault();
+          paragrafo.textContent = "NON SONO COMPILATI TUTTI I CAMPI";
+        }
+      };
+    </script>
+  </body>
+</html>

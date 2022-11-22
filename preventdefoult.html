@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <title>prove su prove</title>
+    <style>
+      input {
+        margin-bottom: 20px;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <div>
+        <label for="numero">NUMERO</label>
+        <input type="text" id="numero" />
+      </div>
+      <div>
+        <label for="email">EMAIL</label>
+        <input type="text" id="email" />
+      </div>
+      <div>
+        <input type="submit" id="submit" />
+      </div>
+    </form>
+    <p></p>
+
+    <script>
+      const form = document.querySelector("form");
+      const numero = document.getElementById("numero");
+      const email = document.getElementById("email");
+      const paragrafo = document.querySelector("p");
+
+      form.onsubmit = function (e) {
+        if (numero.value === "" || email.value === "") {
+          e.preventDefault();
+          paragrafo.textContent = "DEVI COMPILARE TUTTI I CAMPI";
+          1;
+        }
+      };
+    </script>
+  </body>
+</html>

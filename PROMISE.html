@@ -1,0 +1,84 @@
+<script>
+  //           +  |  *  |
+  // | A | B | OR | AND |
+  // |---|---|----|-----|
+  // | 0 | 0 | 0  | 0   |
+  // | 0 | 1 | 1  | 0   |
+  // | 1 | 0 | 1  | 0   |
+  // | 1 | 1 | 1  | 1   |
+
+  function giveBeerToUser(user) {
+    if (user.age > 18) {
+      if (user.astemio === false) {
+        give(user, "beer");
+      } else {
+        dontGive(user, "beer");
+      }
+    } else {
+      dontGive(user, "beer");
+    }
+  }
+
+  function giveBeerToUser(user) {
+    if (user.age < 18) {
+      return dontGive(user, "beer");
+    }
+
+    if (user.astemio === true) {
+      return dontGive(user, "beer");
+    }
+
+    return give(user, "beer");
+  }
+</script>
+
+<html>
+  <head></head>
+  <body>
+    <script>
+      function generateMyError(message) {
+        return new TypeError(message);
+      }
+
+      function notEmptyString(str) {
+        if (typeof str !== "string") return false;
+        if (str.length === 0) return false;
+
+        return true;
+      }
+
+      function isPositiveNumber(num) {
+        if (typeof num !== "number") return false;
+        if (num < 0) return false;
+
+        return true;
+      }
+
+      function timeoutPromise(message, interval) {
+        return new Promise((resolve, reject) => {
+          if (notEmptyString(message)) {
+            return reject(
+              new TypeError("il messaggio è vuoto o non è una stringa")
+            );
+          }
+
+          if (isPositiveNumber(interval) === false) {
+            return reject(
+              new TypeError("in messaggio è vuoto o non è un numero")
+            );
+          }
+
+          setTimeout(() => resolve(message), interval);
+        });
+      }
+
+      timeoutPromise(3, 2000)
+        .then((message) => {
+          alert(message);
+        })
+        .catch((e) => {
+          console.trace(e);
+        });
+    </script>
+  </body>
+</html>

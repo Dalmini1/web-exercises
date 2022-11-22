@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <title>stringa javascript</title>
+    <style>
+      input {
+        display: block;
+        margin-bottom: 20px;
+      }
+      button {
+        padding: 30px;
+        background-color: blue;
+        color: aliceblue;
+        border: 5px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" name="numero" placeholder="inserisci un numero" />
+    <button>calcola cubo!</button>
+    <h1>-</h1>
+    <script>
+      let button = document.querySelector("button");
+      let title = document.querySelector("h1");
+      let number = document.querySelector("input");
+
+      function cubo(number) {
+        let result = number * number * number;
+        console.log(result);
+        return result;
+      }
+
+      button.addEventListener("click", () => {
+        title.innerHTML = cubo(number.value);
+      });
+    </script>
+  </body>
+</html>
